@@ -1,3 +1,68 @@
+// ===== LIGHT / DARK THEME TOGGLE =====
+(function () {
+  const STORAGE_KEY = 'copal-theme';
+  const root = document.documentElement;
+
+  function applyTheme(theme, btn) {
+    root.setAttribute('data-theme', theme);
+    if (btn) {
+      btn.setAttribute(
+        'aria-label',
+        theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+      );
+    }
+    try { localStorage.setItem(STORAGE_KEY, theme); } catch (_) {}
+  }
+
+  function getInitialTheme() {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored === 'dark' || stored === 'light') return stored;
+    } catch (_) {}
+    // Fall back to OS preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  // Apply data-theme immediately (before DOM is ready) to avoid flash-of-wrong-theme.
+  // The inline <head> script already did this, but this ensures correctness if that
+  // script is ever removed.
+  const initialTheme = getInitialTheme();
+  root.setAttribute('data-theme', initialTheme);
+  try { localStorage.setItem(STORAGE_KEY, initialTheme); } catch (_) {}
+
+  // Wire up the button after DOM is available
+  function initToggle() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+
+    // Sync aria-label with whatever theme is active right now
+    const currentTheme = root.getAttribute('data-theme') || 'light';
+    btn.setAttribute(
+      'aria-label',
+      currentTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+    );
+
+    btn.addEventListener('click', function () {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(next, btn);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initToggle);
+  } else {
+    initToggle();
+  }
+
+  // Keep in sync if user changes OS preference while tab is open
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+    // Only follow OS change if the user has not made an explicit choice
+    try { if (localStorage.getItem(STORAGE_KEY)) return; } catch (_) {}
+    const btn = document.getElementById('theme-toggle');
+    applyTheme(e.matches ? 'dark' : 'light', btn);
+  });
+})();
+
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {

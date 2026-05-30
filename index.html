@@ -10,6 +10,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function(){
+      var k='copal-theme',s;
+      try{s=localStorage.getItem(k);}catch(e){}
+      var t=s||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+      document.documentElement.setAttribute('data-theme',t);
+    })();
+  </script>
 </head>
 <body>
 
@@ -29,6 +37,25 @@
         <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#reservations">Reservations</a></li>
       </ul>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Switch to dark mode"
+        title="Toggle light / dark theme"
+      >
+        <!-- Sun icon (shown in dark mode) -->
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+          <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42
+               M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+            d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
     </div>
   </nav>
 
@@ -371,6 +398,28 @@
     </div>
   </section>
 
+  <!-- ===== LOCATION MAP ===== -->
+  <section id="location" aria-labelledby="location-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 id="location-heading">Find Us</h2>
+        <p class="section-subtitle">1 Keong Saik Road, #02-01 &middot; Singapore 089109</p>
+      </div>
+    </div>
+    <div class="location-map-wrap reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8074989849535!2d103.84074007496614!3d1.2801229987015053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1990757b1719%3A0xa6e19f3d5b3c7a3a!2s1%20Keong%20Saik%20Rd%2C%20Singapore%20089109!5e0!3m2!1sen!2ssg!4v1717000000000!5m2!1sen!2ssg"
+        width="100%"
+        height="420"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Copal restaurant location on Google Maps"
+      ></iframe>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer id="footer" role="contentinfo">
     <div class="footer-container">
@@ -415,7 +464,7 @@
   <!-- ===== WHATSAPP CHATBOT BUTTON ===== -->
   <a
     class="whatsapp-fab"
-    href="https://wa.me/6565XXXXXXXX?text=Hello%2C%20I%27d%20like%20to%20make%20a%20reservation%20at%20Copal."
+    href="https://api.whatsapp.com/send?phone=6591270766&text=Hello%2C%20I%20would%20like%20to%20make%20a%20reservation%20at%20Copal."
     target="_blank"
     rel="noopener noreferrer"
     role="link"
