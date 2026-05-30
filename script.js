@@ -54,9 +54,9 @@ function initHamburger() {
 /* ===== SCROLL REVEAL (IntersectionObserver) ===== */
 function initScrollReveal() {
   const items = document.querySelectorAll('.reveal');
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Fallback for browsers without IntersectionObserver
-  if (!('IntersectionObserver' in window)) {
+  if (!('IntersectionObserver' in window) || prefersReduced) {
     items.forEach(el => el.classList.add('visible'));
     return;
   }
@@ -77,6 +77,7 @@ function initScrollReveal() {
 function initTestimonialCarousel() {
   const cards   = Array.from(document.querySelectorAll('.testimonial-card'));
   const dots    = Array.from(document.querySelectorAll('.dot'));
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let current   = 0;
   let timer     = null;
 
@@ -115,7 +116,7 @@ function initTestimonialCarousel() {
   wrapper.addEventListener('focusin',    () => clearInterval(timer));
   wrapper.addEventListener('focusout',   startTimer);
 
-  startTimer();
+  if (!prefersReduced) startTimer();
 }
 
 /* ===== RESERVATION FORM ===== */
