@@ -2,6 +2,10 @@
 
 An elegant fine-dining restaurant website for a French restaurant in Singapore, built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.
 
+## Preview
+
+![La Maison Singa](screenshot.png)
+
 ## Live Demo
 
 [View Site](https://supriaa.github.io/RestaurantBooking/)
