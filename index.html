@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Maison Singa — Fine French Dining, Singapore</title>
+  <meta name="description" content="La Maison Singa — authentic French cuisine in the heart of Singapore. Reserve your table today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="La Maison Singa — home">La Maison Singa</a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#reservations">Reservations</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="hero" role="banner">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 2008 &middot; Singapore</p>
+      <h1>La Maison Singa</h1>
+      <p class="hero-tagline">Authentic French cuisine in the heart of the city</p>
+      <a href="#reservations" class="btn-primary">Reserve a Table</a>
+    </div>
+  </header>
+
+  <!-- ===== MENU ===== -->
+  <section id="menu" aria-labelledby="menu-heading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <h2 id="menu-heading">Our Menu</h2>
+        <p class="section-intro">Crafted from the finest seasonal produce, our menu celebrates the timeless traditions of French gastronomy.</p>
+      </div>
+
+      <!-- Entrées -->
+      <div class="menu-category reveal">
+        <h3 class="category-title">Entr&eacute;es</h3>
+        <div class="menu-grid">
+
+          <article class="dish-card">
+            <div class="dish-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80"
+                alt="Escargots de Bourgogne — snails baked in garlic herb butter, served with rustic baguette"
+                loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-header">
+                <h4>Escargots de Bourgogne</h4>
+                <span class="dish-price">S$28</span>
+              </div>
+              <p>Snails baked in garlic herb butter, served with rustic baguette</p>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+                alt="Foie Gras Poêlé — pan-seared duck foie gras with brioche toast and fig compote"
+                loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-header">
+                <h4>Foie Gras Po&ecirc;l&eacute;</h4>
+                <span class="dish-price">S$38</span>
+              </div>
+              <p>Pan-seared duck foie gras, brioche toast, fig compote</p>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80"
+                alt="Soupe à l'Oignon — classic French onion soup with Gruyère croûton"
+                loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-header">
+                <h4>Soupe &agrave; l&rsquo;Oignon</h4>
+                <span class="dish-price">S$22</span>
+              </div>
+              <p>Classic French onion soup, Gruy&egrave;re cro&ucirc;ton, slow-caramelised onions</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Plats Principaux -->
+      <div class="menu-category reveal">
+        <h3 class="category-title">Plats Principaux</h3>
+        <div class="menu-grid">
+
+          <article class="dish-card">
+            <div class="dish-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+                alt="Coq au Vin — braised chicken in Burgundy wine with mushrooms and lardons"
+                loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-header">
+                <h4>Coq au Vin</h4>
+                <span class="dish-price">S$48</span>
+              </div>
+              <p>Braised chicken in Burgundy wine, wild mushrooms, pearl onions, lardons</p>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+                alt="Bœuf Bourguignon — slow-braised beef in red wine with root vegetables"
+                loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-header">
+                <h4>B&oelig;uf Bourguignon</h4>
+                <span class="dish-price">S$52</span>
+              </div>
+              <p>Slow-braised beef in red wine, root vegetables, buttery pommes pur&eacute;e</p>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
+                alt="Sole Meunière — Dover sole with brown butter, capers and lemon"
+                loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-header">
+                <h4>Sole Meuni&egrave;re</h4>
+                <span class="dish-price">S$58</span>
+              </div>
+              <p>Dover sole, golden brown butter, capers, lemon, steamed haricots verts</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div class="menu-category reveal">
+        <h3 class="category-title">Desserts</h3>
+        <div class="menu-grid">
+
+          <article class="dish-card">
+            <div class="dish-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?auto=format&fit=crop&w=800&q=80"
+                alt="Crème Brûlée — vanilla bean custard with a caramelised sugar crust"
+                loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-header">
+                <h4>Cr&egrave;me Br&ucirc;l&eacute;e</h4>
+                <span class="dish-price">S$18</span>
+              </div>
+              <p>Vanilla bean custard beneath a perfectly caramelised sugar crust</p>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=800&q=80"
+                alt="Tarte Tatin — upside-down caramelised apple tart served with crème fraîche"
+                loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-header">
+                <h4>Tarte Tatin</h4>
+                <span class="dish-price">S$20</span>
+              </div>
+              <p>Upside-down caramelised apple tart, served warm with cr&egrave;me fra&icirc;che</p>
+            </div>
+          </article>
+
+          <article class="dish-card">
+            <div class="dish-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=80"
+                alt="Profiteroles — choux pastry with vanilla ice cream and warm chocolate sauce"
+                loading="lazy">
+            </div>
+            <div class="dish-info">
+              <div class="dish-header">
+                <h4>Profiteroles</h4>
+                <span class="dish-price">S$22</span>
+              </div>
+              <p>Choux pastry filled with vanilla ice cream, warm dark chocolate sauce</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" aria-labelledby="testimonials-heading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <h2 id="testimonials-heading">What Our Guests Say</h2>
+      </div>
+
+      <div class="testimonials-wrapper reveal" aria-label="Guest testimonials carousel">
+        <div class="testimonials-track" aria-live="polite" aria-atomic="true">
+
+          <div class="testimonial-card active" role="group" aria-label="Testimonial 1 of 3">
+            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+            <p class="quote-text">An unforgettable evening. The B&oelig;uf Bourguignon transported me straight to Lyon &mdash; richly complex, deeply comforting, and utterly refined.</p>
+            <div class="testimonial-footer">
+              <span class="guest-name">&mdash; Sophie L.</span>
+              <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card" role="group" aria-label="Testimonial 2 of 3">
+            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+            <p class="quote-text">Impeccable service and divine food. The cr&egrave;me br&ucirc;l&eacute;e alone is worth the visit &mdash; and the sommelier&rsquo;s wine pairing was inspired.</p>
+            <div class="testimonial-footer">
+              <span class="guest-name">&mdash; James K.</span>
+              <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card" role="group" aria-label="Testimonial 3 of 3">
+            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+            <p class="quote-text">La Maison Singa captures everything I love about French dining &mdash; elegance, warmth, and soul. It has become our most treasured celebration table.</p>
+            <div class="testimonial-footer">
+              <span class="guest-name">&mdash; Marie-Claire D.</span>
+              <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
+          <button class="dot active" role="tab" aria-selected="true" aria-label="Show testimonial 1"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-label="Show testimonial 2"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-label="Show testimonial 3"></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== RESERVATIONS ===== -->
+  <section id="reservations" aria-labelledby="reservations-heading">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <h2 id="reservations-heading">Reserve a Table</h2>
+        <p class="section-intro">We look forward to welcoming you. Please complete the form below and our team will confirm your reservation within 24 hours.</p>
+      </div>
+
+      <div class="form-wrapper reveal">
+
+        <form id="reservation-form" novalidate aria-label="Table reservation enquiry form">
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="full-name">Full Name <span class="required" aria-label="required">*</span></label>
+              <input type="text" id="full-name" name="full-name" required autocomplete="name" placeholder="Jean Dupont">
+              <span class="error-msg" id="error-full-name" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required" aria-label="required">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="jean@example.com">
+              <span class="error-msg" id="error-email" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone <span class="required" aria-label="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+65 9123 4567">
+              <span class="error-msg" id="error-phone" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="guests">Number of Guests <span class="required" aria-label="required">*</span></label>
+              <input type="number" id="guests" name="guests" required min="1" max="20" placeholder="2">
+              <span class="error-msg" id="error-guests" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Preferred Date <span class="required" aria-label="required">*</span></label>
+              <input type="date" id="date" name="date" required>
+              <span class="error-msg" id="error-date" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Preferred Time <span class="required" aria-label="required">*</span></label>
+              <select id="time" name="time" required>
+                <option value="">Select a time</option>
+                <optgroup label="Lunch">
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                </optgroup>
+                <optgroup label="Dinner">
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                </optgroup>
+              </select>
+              <span class="error-msg" id="error-time" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="requests">Special Requests <span class="optional">(optional)</span></label>
+              <textarea id="requests" name="requests" rows="4" placeholder="Dietary requirements, occasion notes, seating preferences&hellip;"></textarea>
+            </div>
+
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="btn-submit">Request Reservation</button>
+          </div>
+        </form>
+
+        <div class="confirmation" id="confirmation" aria-live="polite" hidden>
+          <div class="confirmation-icon" aria-hidden="true">&#10022;</div>
+          <h3>Merci beaucoup</h3>
+          <p id="confirmation-msg"></p>
+          <p class="confirmation-sub">Our maître d&rsquo; will reach out to confirm your reservation shortly.</p>
+          <button class="btn-outline" id="new-reservation-btn">Make Another Reservation</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <p class="footer-logo">La Maison Singa</p>
+        <p class="footer-tagline">Authentic French Cuisine</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <address>
+          12 Rue de la Paix<br>
+          Singapore 049321<br>
+          <a href="tel:+6561234567">+65 6123 4567</a><br>
+          <a href="mailto:reservations@maisonlumiere.sg">reservations@maisonlumiere.sg</a>
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p>Lunch: Tue &ndash; Sun, 12:00 &ndash; 14:30</p>
+        <p>Dinner: Mon &ndash; Sun, 18:00 &ndash; 22:30</p>
+        <p class="footer-note">Closed Monday lunchtimes</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul role="list" class="social-links">
+          <li><a href="#" aria-label="Visit La Maison Singa on Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="Visit La Maison Singa on Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Read our TripAdvisor reviews">TripAdvisor</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 La Maison Singa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
