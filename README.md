@@ -1,10 +1,10 @@
-# La Maison Singa
+# Copal
 
-An elegant fine-dining restaurant website for a French restaurant in Singapore, built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.
+An elegant fine-dining restaurant website for a high-end Mexican restaurant in Singapore, built with vanilla HTML, CSS, and JavaScript — no frameworks, no dependencies.
 
 ## Preview
 
-![La Maison Singa](screenshot.png)
+![Copal](screenshot.png)
 
 ## Live Demo
 
@@ -16,16 +16,16 @@ An elegant fine-dining restaurant website for a French restaurant in Singapore, 
 - Mobile hamburger menu with outside-click-to-close
 - Animated scroll-reveal for menu sections and content blocks (IntersectionObserver)
 - Auto-rotating testimonial carousel (5 s interval, pauses on hover/focus, dot navigation)
-- Full menu across three courses: Entrées, Plats Principaux, and Desserts with pricing in SGD
+- Full menu across three courses: Entrées, Platos Principales, and Postres with pricing in SGD
 - Table reservation form with client-side validation (name, email, phone, guests, date, time)
 - Booking confirmation message on successful submission with guest name and date interpolated
 - Responsive layout: 3-column menu grid → 2-column at 900 px → 1-column at 768 px
 - Hamburger nav on mobile; hero parallax disabled on small screens
-- Accessible markup: ARIA roles, `aria-expanded`, `aria-live` regions, focus management
+- Accessible markup: skip link, ARIA roles, `aria-expanded`, `aria-live` regions, `focus-visible` outlines, focus management
 
 ## Tech Stack
 
-- HTML5 (semantic sections, ARIA attributes)
+- HTML5 (semantic sections, ARIA attributes, skip link)
 - CSS3 (custom properties for theming, CSS transitions, `position: absolute` carousel)
 - Vanilla JavaScript (`IntersectionObserver`, `setInterval`, client-side form validation)
 - Fonts: Cormorant Garamond + Montserrat (Google Fonts)
@@ -63,11 +63,13 @@ Edit these CSS custom properties in `styles.css` `:root` to retheme the entire s
 
 | Token | Role |
 |-------|------|
-| `--dark` | Primary dark background |
-| `--cream` | Main light background |
-| `--cream-light` | Subtle off-white variant |
-| `--gold` | Accent colour |
-| `--gold-dark` | Accent hover state |
+| `--dark` | Primary dark background (espresso) |
+| `--dark-rich` | Deepest background variant |
+| `--cream` | Main light background (warm parchment) |
+| `--cream-light` | Subtle off-white warm variant |
+| `--gold` | Primary accent colour (terracotta) |
+| `--gold-dark` | Accent hover/depth state (deep terracotta) |
+| `--sapphire` | Secondary accent (marigold amber) |
 | `--text` | Body text |
 | `--text-muted` | Secondary/muted text |
 
